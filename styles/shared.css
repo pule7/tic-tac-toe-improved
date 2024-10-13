@@ -1,0 +1,34 @@
+body {
+    text-align: center;
+    background-color: aliceblue;
+    margin: 0;
+}
+
+header {
+    background-color: rgb(77, 165, 243);
+    color: white;
+    margin: 0;
+    height: 150px;
+    align-content: center;
+}
+
+h1 {
+    margin: 0;
+    font-size: 3rem;
+}
+
+footer {
+    background-color: rgb(137, 195, 247);
+    color: white;
+    margin: 0;
+    height: 75px;
+    align-content: center;
+}
+
+button {
+    background-color: rgb(77, 165, 243);;
+    color: white;
+    padding: 0.25rem;
+    border-radius: 6px;
+    border: 1px rgb(23, 96, 159);
+}
