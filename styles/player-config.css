@@ -46,3 +46,12 @@
     border-radius: 6px;
     background-color: rgb(186, 220, 250);
 }
+
+.edit {
+    background-color: rgb(92, 171, 240);
+}
+
+.edit:hover {
+    background-color: transparent;
+    cursor: grab;  
+}

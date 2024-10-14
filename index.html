@@ -4,10 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tic Tac Toe</title>
-    <link rel="stylesheet" href="styles/after-game.css">
-    <link rel="stylesheet" href="styles/game.css">
-    <link rel="stylesheet" href="styles/player-config.css" />
     <link rel="stylesheet" href="styles/shared.css" />
+    <link rel="stylesheet" href="styles/after-game.css" />
+    <link rel="stylesheet" href="styles/game.css" />
+    <link rel="stylesheet" href="styles/player-config.css" />
+    <script src="index.js" defer></script>
   </head>
   <body>
     <header>
@@ -16,60 +17,59 @@
     <main>
       <section id="player-config">
         <div id="backdrop"></div>
-        <div id="players-overlay">
+        <form id="players-overlay">
           <div id="player-input">
-            <label for="playername">Player name</label>
-            <input type="text" id="playername" />
+            <label for="input-playername">Player name</label>
+            <input type="text" id="input-playername" />
           </div>
           <div id="overlay-buttons">
-            <button type="reset">Cancel</button>
+            <button id="cancel-btn" type="reset">Cancel</button>
             <button>Save</button>
           </div>
-        </div>
+        </form>
         <div id="players">
-            <article class="player-desk">
-                <h3>Player 1</h3>
-                <p>Playername</p>
-                <p>Symbol X</p>
-                <button>Edit</button>
-              </article>
-              <article class="player-desk">
-                <h3>Player 2</h3>
-                <p>Playername</p>
-                <p>Symbol Y</p>
-                <button>Edit</button>
-              </article>
-            </div>
-            <button>Start</button>
+          <article class="player-desk">
+            <h3>Player 1</h3>
+            <p>Playername</p>
+            <p>Symbol X</p>
+            <button id="edit-1-btn" class="edit">Edit</button>
+          </article>
+          <article class="player-desk">
+            <h3>Player 2</h3>
+            <p>Playername</p>
+            <p>Symbol Y</p>
+            <button id="edit-2-btn" class="edit">Edit</button>
+          </article>
+        </div>
+        <button>Start</button>
       </section>
       <section id="game">
-        
         <p>It's your turn <span>PLAYERNAME</span>!</p>
         <ol id="game-board">
-            <li>X</li>
-            <li>X</li>
-            <li>X</li>
+          <li>X</li>
+          <li>X</li>
+          <li>X</li>
 
-            <li>X</li>
-            <li>X</li>
-            <li>X</li>
+          <li>X</li>
+          <li>X</li>
+          <li>X</li>
 
-            <li>X</li>
-            <li>X</li>
-            <li>X</li>
+          <li>X</li>
+          <li>X</li>
+          <li>X</li>
         </ol>
       </section>
       <div id="after-game-overlay">
         <p>Congratulations PLAYERNAME, you are a winner!</p>
         <p>It's a draw!</p>
         <div>
-            <button>Cancel</button>
-            <button>Play again</button>
+          <button>Cancel</button>
+          <button>Play again</button>
         </div>
       </div>
     </main>
     <footer>
-        <p>&copy DP 1991.</p>
+      <p>&copy DP 1991.</p>
     </footer>
   </body>
 </html>

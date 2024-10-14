@@ -5,7 +5,7 @@ body {
 }
 
 header {
-    background-color: rgb(77, 165, 243);
+    background: linear-gradient(45deg, rgb(167, 212, 250), rgb(137, 195, 247) );
     color: white;
     margin: 0;
     height: 150px;
@@ -18,7 +18,7 @@ h1 {
 }
 
 footer {
-    background-color: rgb(137, 195, 247);
+    background: linear-gradient(-45deg, rgb(167, 212, 250), rgb(137, 195, 247) );
     color: white;
     margin: 0;
     height: 75px;
@@ -26,9 +26,14 @@ footer {
 }
 
 button {
-    background-color: rgb(77, 165, 243);;
+    background-color: rgb(77, 165, 243);
     color: white;
     padding: 0.25rem;
     border-radius: 6px;
     border: 1px rgb(23, 96, 159);
+}
+
+button :hover {
+    background-color: rgb(77, 165, 243);
+    cursor: grab;  
 }
