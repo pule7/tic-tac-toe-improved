@@ -6,9 +6,11 @@
     <title>Tic Tac Toe</title>
     <link rel="stylesheet" href="styles/shared.css" />
     <link rel="stylesheet" href="styles/after-game.css" />
-    <link rel="stylesheet" href="styles/game.css" />
     <link rel="stylesheet" href="styles/player-config.css" />
-    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="styles/game.css" />
+    <script src="scripts/game.js" defer></script>
+    <script src="scripts/player-config.js" defer></script>
+    <script src="scripts/index.js" defer></script>
   </head>
   <body>
     <header>
@@ -21,47 +23,48 @@
           <div id="player-input">
             <label for="input-playername">Player name</label>
             <input type="text" id="input-playername" />
+            <p id="warning1"></p>
           </div>
           <div id="overlay-buttons">
             <button id="cancel-btn" type="reset">Cancel</button>
-            <button>Save</button>
+            <button id="save-player-btn">Save</button>
           </div>
         </form>
         <div id="players">
           <article class="player-desk">
             <h3>Player 1</h3>
-            <p>Playername</p>
+            <p id="playername1" class="playername-style"></p>
             <p>Symbol X</p>
-            <button id="edit-1-btn" class="edit">Edit</button>
+            <button id="edit-1-btn" class="edit" data-playerid="1">Edit</button>
           </article>
           <article class="player-desk">
             <h3>Player 2</h3>
-            <p>Playername</p>
+            <p id="playername2" class="playername-style"></p>
             <p>Symbol Y</p>
-            <button id="edit-2-btn" class="edit">Edit</button>
+            <button id="edit-2-btn" class="edit" data-playerid="2">Edit</button>
           </article>
         </div>
-        <button>Start</button>
+        <button id="start-btn">Start</button>
       </section>
       <section id="game">
-        <p>It's your turn <span>PLAYERNAME</span>!</p>
+        <p>Your move <span id="active-player"></span>!</p>
         <ol id="game-board">
-          <li>X</li>
-          <li>X</li>
-          <li>X</li>
+          <li data-row="0" data-col="0"></li>
+          <li data-row="0" data-col="1"></li>
+          <li data-row="0" data-col="2"></li>
 
-          <li>X</li>
-          <li>X</li>
-          <li>X</li>
+          <li data-row="1" data-col="0"></li>
+          <li data-row="1" data-col="1"></li>
+          <li data-row="1" data-col="2"></li>
 
-          <li>X</li>
-          <li>X</li>
-          <li>X</li>
+          <li data-row="2" data-col="0"></li>
+          <li data-row="2" data-col="1"></li>
+          <li data-row="2" data-col="2"></li>
         </ol>
       </section>
       <div id="after-game-overlay">
-        <p>Congratulations PLAYERNAME, you are a winner!</p>
-        <p>It's a draw!</p>
+        <p id="winner-paragraph">Congratulations <span id="winner"></span>, you are a winner!</p>
+        <p id="draw">It's a draw!</p>
         <div>
           <button>Cancel</button>
           <button>Play again</button>
