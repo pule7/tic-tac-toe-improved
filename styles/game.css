@@ -19,6 +19,15 @@
   align-content: center;
 }
 
+#game-board li:hover {
+  background-color: rgb(115, 180, 236);
+  cursor: pointer;
+}
+
+#game-board li.clicked:hover {
+  cursor: default;
+}
+
 .not-clicked {
   background-color: rgb(186, 220, 250);
 }

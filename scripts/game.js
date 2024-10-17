@@ -34,10 +34,10 @@ function startGame() {
 
 function playGame(event) {
   let listItem = event.target;
-  listItem.classList.add("clicked");
   if (listItem.textContent !== "") {
     return;
   }
+  listItem.classList.add("clicked");
   numberOfTurns++;
   listItem.textContent = players[index].symbol;
   let row = listItem.dataset.row;
