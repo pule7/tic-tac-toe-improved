@@ -1,4 +1,4 @@
-let numberOfTurns = 1;
+let numberOfTurns = 0;
 let index = 0;
 let winner = 3;
 let gameBoard = [
@@ -16,6 +16,7 @@ function switchPlayer() {
 }
 
 function startGame() {
+  startGameBtn.style.display = "none";
   if (player1.textContent === "" || player2.textContent === "") {
     alert("Please enter names for both players!");
     return;
@@ -33,9 +34,11 @@ function startGame() {
 
 function playGame(event) {
   let listItem = event.target;
+  listItem.classList.add("clicked");
   if (listItem.textContent !== "") {
     return;
   }
+  numberOfTurns++;
   listItem.textContent = players[index].symbol;
   let row = listItem.dataset.row;
   let col = listItem.dataset.col;
@@ -45,8 +48,8 @@ function playGame(event) {
   activePlayerSpan.textContent = players[index].name;
   checkForAWinner();
   stopGame();
-  console.log(winner);
-  numberOfTurns++;
+  console.log("Broj izmjena je " + numberOfTurns);
+  console.log("Winner je " + winner);
 }
 
 function checkForAWinner() {
@@ -89,13 +92,38 @@ function stopGame() {
   if (winner === 1 || winner === 2) {
     afterGameOverlay.style.display = "block";
     backdrop.style.display = "block";
+    winnerParagraph.style.display = "block";
     winnerSpan.textContent = players[winner - 1].name;
     drawParagraph.style.display = "none";
+    numberOfTurns = 0;
+    index = 0;
+    winner = 3;
+    gameBoard = [
+      [0, 0, 0],
+      [0, 0, 0],
+      [0, 0, 0],
+    ];
+    for (let oneGameField of allGameFields) {
+      oneGameField.removeEventListener("click", playGame);
+      backdrop.removeEventListener("click", closePlayerOverlay);
+    }
   }
 
   if (numberOfTurns === 9) {
+    numberOfTurns = 0;
+    index = 0;
+    gameBoard = [
+      [0, 0, 0],
+      [0, 0, 0],
+      [0, 0, 0],
+    ];
     afterGameOverlay.style.display = "block";
     backdrop.style.display = "block";
+    drawParagraph.style.display = "block";
     winnerParagraph.style.display = "none";
+    for (let oneGameField of allGameFields) {
+      oneGameField.removeEventListener("click", playGame);
+      backdrop.removeEventListener("click", closePlayerOverlay);
+    }
   }
 }

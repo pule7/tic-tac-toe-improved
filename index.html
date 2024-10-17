@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tic Tac Toe</title>
     <link rel="stylesheet" href="styles/shared.css" />
-    <link rel="stylesheet" href="styles/after-game.css" />
     <link rel="stylesheet" href="styles/player-config.css" />
     <link rel="stylesheet" href="styles/game.css" />
-    <script src="scripts/game.js" defer></script>
+    <link rel="stylesheet" href="styles/after-game.css" />
     <script src="scripts/player-config.js" defer></script>
+    <script src="scripts/game.js" defer></script>
+    <script src="scripts/after-game.js" defer></script>
     <script src="scripts/index.js" defer></script>
   </head>
   <body>
@@ -45,29 +46,34 @@
           </article>
         </div>
         <button id="start-btn">Start</button>
+        <button id="restart2">Restart</button>
       </section>
       <section id="game">
-        <p>Your move <span id="active-player"></span>!</p>
+        <p id="active-player-paragraph">
+          Your move <span id="active-player"></span>!
+        </p>
         <ol id="game-board">
-          <li data-row="0" data-col="0"></li>
-          <li data-row="0" data-col="1"></li>
-          <li data-row="0" data-col="2"></li>
+          <li data-row="0" data-col="0" class="not-clicked"></li>
+          <li data-row="0" data-col="1" class="not-clicked"></li>
+          <li data-row="0" data-col="2" class="not-clicked"></li>
 
-          <li data-row="1" data-col="0"></li>
-          <li data-row="1" data-col="1"></li>
-          <li data-row="1" data-col="2"></li>
+          <li data-row="1" data-col="0" class="not-clicked"></li>
+          <li data-row="1" data-col="1" class="not-clicked"></li>
+          <li data-row="1" data-col="2" class="not-clicked"></li>
 
-          <li data-row="2" data-col="0"></li>
-          <li data-row="2" data-col="1"></li>
-          <li data-row="2" data-col="2"></li>
+          <li data-row="2" data-col="0" class="not-clicked"></li>
+          <li data-row="2" data-col="1" class="not-clicked"></li>
+          <li data-row="2" data-col="2" class="not-clicked"></li>
         </ol>
       </section>
       <div id="after-game-overlay">
-        <p id="winner-paragraph">Congratulations <span id="winner"></span>, you are a winner!</p>
+        <p id="winner-paragraph">
+          Congratulations <span id="winner"></span>, you are a winner!
+        </p>
         <p id="draw">It's a draw!</p>
         <div>
-          <button>Cancel</button>
-          <button>Play again</button>
+          <button id="after-game-cancel">Cancel</button>
+          <button id="restart">Play again</button>
         </div>
       </div>
     </main>

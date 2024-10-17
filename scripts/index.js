@@ -18,6 +18,7 @@ backdrop.addEventListener("click", closePlayerOverlay);
 //game.js
 let startGameBtn = document.getElementById("start-btn");
 let gameSection = document.getElementById("game");
+let activePlayerParagraph = document.getElementById("active-player-paragraph");
 let activePlayerSpan = document.getElementById("active-player");
 let allGameFields = document.querySelectorAll("li");
 let afterGameOverlay = document.getElementById("after-game-overlay");
@@ -29,3 +30,12 @@ startGameBtn.addEventListener("click", startGame);
 for (let oneGameField of allGameFields) {
   oneGameField.addEventListener("click", playGame);
 }
+
+//after-game.js
+let afterGameCancelBtn = document.getElementById("after-game-cancel");
+let restartBtn = document.getElementById("restart");
+let restartBtn2 = document.getElementById("restart2");
+
+afterGameCancelBtn.addEventListener("click", closeAfterGameOverlay);
+restartBtn.addEventListener("click", restartGame);
+restartBtn2.addEventListener("click", restartGame);

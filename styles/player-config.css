@@ -47,6 +47,10 @@
   background-color: rgb(186, 220, 250);
 }
 
+h3 {
+  color: grey;
+}
+
 .edit {
   background-color: rgb(92, 171, 240);
 }

@@ -17,6 +17,7 @@ function closePlayerOverlay() {
   inputElement.value = "";
   warningOverlayParagraph.textContent = "";
   warningOverlayParagraph.classList.remove("warning");
+  
 }
 
 function savePlayerName(event) {

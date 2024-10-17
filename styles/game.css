@@ -15,7 +15,14 @@
 }
 
 #game-board li {
-  background-color: rgb(186, 220, 250);
   border-radius: 8px;
   align-content: center;
+}
+
+.not-clicked {
+  background-color: rgb(186, 220, 250);
+}
+
+.clicked {
+  background-color: rgb(115, 180, 236);
 }

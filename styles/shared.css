@@ -1,39 +1,41 @@
 body {
-    text-align: center;
-    background-color: aliceblue;
-    margin: 0;
+  text-align: center;
+  background-color: aliceblue;
+  margin: 0;
 }
 
 header {
-    background: linear-gradient(45deg, rgb(167, 212, 250), rgb(137, 195, 247) );
-    color: white;
-    margin: 0;
-    height: 150px;
-    align-content: center;
+  background: linear-gradient(45deg, rgb(167, 212, 250), rgb(137, 195, 247));
+  color: white;
+  margin: 0;
+  height: 150px;
+  align-content: center;
 }
 
 h1 {
-    margin: 0;
-    font-size: 3rem;
+  margin: 0;
+  font-size: 3rem;
 }
 
 footer {
-    background: linear-gradient(-45deg, rgb(167, 212, 250), rgb(137, 195, 247) );
-    color: white;
-    margin: 0;
-    height: 75px;
-    align-content: center;
+  background: linear-gradient(-45deg, rgb(167, 212, 250), rgb(137, 195, 247));
+  color: white;
+  margin: 0;
+  height: 75px;
+  align-content: center;
 }
 
 button {
-    background-color: rgb(77, 165, 243);
-    color: white;
-    padding: 0.25rem;
-    border-radius: 6px;
-    border: 1px rgb(23, 96, 159);
+  background-color: rgb(77, 165, 243);
+  color: white;
+  padding: 0.25rem;
+  border-radius: 6px;
+  border: 1px rgb(23, 96, 159);
 }
 
 button :hover {
-    background-color: rgb(77, 165, 243);
-    cursor: grab;  
+  background-color: rgb(77, 165, 243);
+  cursor: grab;
 }
+
+

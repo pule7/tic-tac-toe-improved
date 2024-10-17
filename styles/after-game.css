@@ -1,11 +1,15 @@
 #after-game-overlay {
-    position: fixed;
-    width: 50%;
-    top: 10rem;
-    left: 25%;
-    padding: 1rem;
-    background-color: aliceblue;
-    border-radius: 6px;
-    font-size: 2rem;
-    display: none;
+  position: fixed;
+  width: 50%;
+  top: 10rem;
+  left: 25%;
+  padding: 1rem;
+  background-color: aliceblue;
+  border-radius: 6px;
+  font-size: 2rem;
+  display: none;
+}
+
+#restart2 {
+  display: none;
 }
