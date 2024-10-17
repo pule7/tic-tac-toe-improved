@@ -90,6 +90,7 @@ function checkForAWinner() {
 
 function stopGame() {
   if (winner === 1 || winner === 2) {
+    activePlayerParagraph.style.display = "none";
     afterGameOverlay.style.display = "block";
     backdrop.style.display = "block";
     winnerParagraph.style.display = "block";
@@ -117,6 +118,7 @@ function stopGame() {
       [0, 0, 0],
       [0, 0, 0],
     ];
+    activePlayerParagraph.style.display = "none";
     afterGameOverlay.style.display = "block";
     backdrop.style.display = "block";
     drawParagraph.style.display = "block";
