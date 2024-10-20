@@ -16,7 +16,6 @@ function switchPlayer() {
 }
 
 function startGame() {
-  startGameBtn.style.display = "none";
   if (player1.textContent === "" || player2.textContent === "") {
     alert("Please enter names for both players!");
     return;
@@ -28,7 +27,10 @@ function startGame() {
     );
     return;
   }
+  startGameBtn.style.display = "none";
   gameSection.style.display = "block";
+  edit1Btn.removeEventListener("click", showPlayerOverlay);
+  edit2Btn.removeEventListener("click", showPlayerOverlay);
   activePlayerSpan.textContent = players[0].name;
 }
 
