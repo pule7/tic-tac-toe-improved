@@ -17,6 +17,7 @@
 #game-board li {
   border-radius: 8px;
   align-content: center;
+  line-height: 0%;
 }
 
 #game-board li:hover {
@@ -34,4 +35,18 @@
 
 .clicked {
   background-color: rgb(115, 180, 236);
+}
+
+@media (max-width: 768px) {
+  #game-board {
+    width: 430px;
+    height: 430px;
+  }
+}
+
+@media (max-width: 480px) {
+  #game-board {
+    width: 360px;
+    height: 360px;
+  }
 }

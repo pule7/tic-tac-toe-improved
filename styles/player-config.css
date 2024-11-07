@@ -35,13 +35,14 @@
 #players {
   display: flex;
   justify-content: space-evenly;
-  width: 700px;
+  width: 45rem;
   margin: 0 auto 2rem;
 }
 
 .player-desk {
   margin-top: 1rem;
-  width: 200px;
+  width: 14rem;
+  height: 12rem;
   padding: 1rem;
   border-radius: 6px;
   background-color: rgb(186, 220, 250);
@@ -70,4 +71,19 @@ h3 {
   font-size: 2rem;
   font-weight: bold;
   color: rgb(8, 131, 238);
+}
+
+@media (max-width: 768px) {
+  .player-desk {
+    margin-top: 2rem;
+    width: 11rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #players {
+    flex-direction: column;
+    width: 15rem;
+    align-items: center;
+  }
 }
