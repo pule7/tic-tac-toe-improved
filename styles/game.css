@@ -18,6 +18,8 @@
   border-radius: 8px;
   align-content: center;
   line-height: 0%;
+  color: white;
+  font-size: 2.5rem;
 }
 
 #game-board li:hover {
@@ -42,11 +44,19 @@
     width: 430px;
     height: 430px;
   }
+
+  #game-board li {
+    font-size: 2.2rem;
+  }
 }
 
 @media (max-width: 480px) {
   #game-board {
     width: 360px;
     height: 360px;
+  }
+
+  #game-board li {
+    font-size: 1.9rem;
   }
 }
